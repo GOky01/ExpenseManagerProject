@@ -3,7 +3,7 @@
 This is an app that allows users to track how much money have they spent.
 Requirements
 For building and running the application you need:
-1.git clone following link https://github.com/GOky01/Expense_Manager.git on your local machine 
+1.git clone following link https://github.com/GOky01/ExpenseManagerProject.git on your local machine 
 
 2.or download project ZIP
  ![image](https://user-images.githubusercontent.com/73914682/111986334-80b7c280-8b16-11eb-9ab4-c6a6f482592d.png)
