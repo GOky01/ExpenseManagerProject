@@ -1,0 +1,18 @@
+2021-03-18 16:14:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUSTOMERS" not found; SQL statement:
+select customer0_.id as id1_0_, customer0_.amount as amount2_0_, customer0_.currency as currency3_0_, customer0_.date as date4_0_, customer0_.username as username5_0_ from customers customer0_ [42102-200]
+2021-03-18 16:14:58 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUSTOMERS" not found; SQL statement:
+select customer0_.id as id1_0_, customer0_.amount as amount2_0_, customer0_.currency as currency3_0_, customer0_.date as date4_0_, customer0_.username as username5_0_ from customers customer0_ [42102-200]
+2021-03-18 16:17:18 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "DELETE TABLE[*] TEST"; expected "identifier"; SQL statement:
+DELETE TABLE TEST [42001-200]
+2021-03-18 16:17:34 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEMA" not found; SQL statement:
+DELETE SCHEMA TEST [42102-200]
+2021-03-18 16:17:36 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "SCHEMA" not found; SQL statement:
+DELETE SCHEMA TEST [42102-200]
+2021-03-18 16:20:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUSTOMERS" not found; SQL statement:
+select customer0_.id as id1_0_, customer0_.amount as amount2_0_, customer0_.currency as currency3_0_, customer0_.date as date4_0_, customer0_.username as username5_0_ from customers customer0_ [42102-200]
