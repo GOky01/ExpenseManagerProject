@@ -37,10 +37,6 @@ You should make next steps:
 
 3.and press Ctrl+Enter.
 
-After all everything left is to open file below and make changes which indicated in
-paragraph 4 
-[Java Trainee Test Problem. Personal expenses.pdf](https://github.com/GOky01/Expense_Manager/files/6182011/Java.Trainee.Test.Problem.Personal.expenses.pdf)
-
 
 (api requests you can do in Postman tool)
 just click the link https://www.postman.com/ ;)
