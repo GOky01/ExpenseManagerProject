@@ -1,34 +1,25 @@
 package com.project.ExpenseManager.controller;
 
-import org.junit.jupiter.api.AfterEach;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class ExpensesControllerTest {
+import javax.servlet.http.HttpServletResponse;
+import java.net.http.HttpResponse;
 
-    @BeforeEach
-    void setUp() {
-    }
+@SpringBootTest
+public class ExpensesControllerTest {
 
-    @AfterEach
-    void tearDown() {
-    }
-
-    @Test
-    void postExpenses() {
-    }
+    @Autowired
+    private ExpensesController expensesController;
 
     @Test
-    void sortedExpenses() {
+    public void contextLoads() throws Exception {
+        assertThat(expensesController).isNotNull();
     }
 
-    @Test
-    void deleteExpensesByDate() {
-    }
-
-    @Test
-    void expensesTotalByBase() {
-    }
 }

@@ -1,70 +1,20 @@
 package com.project.ExpenseManager.model;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import com.project.ExpenseManager.config.ExpensesModelConfigBean;
 import org.junit.jupiter.api.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 class ExpensesTest {
-
-    @BeforeEach
-    void setUp() {
-    }
-
-    @AfterEach
-    void tearDown() {
-    }
-
+    ApplicationContext context = new AnnotationConfigApplicationContext(ExpensesModelConfigBean.class);
+    Expenses expenses = context.getBean("expenses",Expenses.class);
     @Test
-    void testEquals() {
-    }
-
-    @Test
-    void testHashCode() {
-    }
-
-    @Test
-    void testToString() {
-    }
-
-    @Test
-    void getId() {
-    }
-
-    @Test
-    void getAmount() {
-    }
-
-    @Test
-    void getCurrency() {
-    }
-
-    @Test
-    void getDate() {
-    }
-
-    @Test
-    void getProduct() {
-    }
-
-    @Test
-    void setId() {
-    }
-
-    @Test
-    void setAmount() {
-    }
-
-    @Test
-    void setCurrency() {
-    }
-
-    @Test
-    void setDate() {
-    }
-
-    @Test
-    void setProduct() {
+    void testingModelCorresponding() {
+        assertNotEquals((long)1,expenses.getId());
+        assertNotEquals("milk",expenses.getProduct());
+        assertNotEquals(10,expenses.getAmount());
+        assertNotEquals("29-06-2021",expenses.getDate());
     }
 }

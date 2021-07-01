@@ -1,13 +1,16 @@
 package com.project.ExpenseManager;
 
+
+
 import org.junit.jupiter.api.Test;
+
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExpenseManagerApplicationTests {
+public class ExpenseManagerApplicationTest {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    public void contextLoads() {
+    }
 
 }

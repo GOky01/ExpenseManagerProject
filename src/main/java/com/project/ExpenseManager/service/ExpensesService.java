@@ -2,27 +2,17 @@ package com.project.ExpenseManager.service;
 
 
 import com.project.ExpenseManager.dto.ExpensesDTO;
-import com.project.ExpenseManager.dto.TotalDTO;
+
 import com.project.ExpenseManager.model.Expenses;
 import com.project.ExpenseManager.repository.ExpensesRepository;
 
 import org.modelmapper.ModelMapper;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.client.RestTemplate;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.math.BigDecimal;
-import java.net.HttpURLConnection;
-import java.net.URL;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import org.springframework.stereotype.Service;
+
 import java.util.*;
 import java.util.stream.Collectors;
+
 
 @Service
 public class ExpensesService {
@@ -48,9 +38,9 @@ public class ExpensesService {
 
     public Map<String, List<Expenses>> sortedExpensesList() {
 
-        List<Expenses> unsortedlist = expensesList();
+        List<Expenses> sortedlist = expensesList();
 
-        Map<String, List<Expenses>> collect = unsortedlist.stream().sorted(Comparator.comparing(Expenses::getDate)).
+        Map<String, List<Expenses>> collect = sortedlist.stream().sorted(Comparator.comparing(Expenses::getDate)).
                 collect(Collectors.groupingBy(Expenses::getDate,LinkedHashMap::new, Collectors.toList()));
 
         return collect;
@@ -68,21 +58,5 @@ public class ExpensesService {
             }
         }
         return afterDel;
-    }
-
-    public TotalDTO expensesTotalByBase(String base) {
-
-        List<Expenses> expensesList = expensesList();
-        TotalDTO totalDTO = new TotalDTO();
-
-        Integer sumOfBase = 0;
-        for (Expenses expenses : expensesList) {
-
-            if (expenses.getCurrency().equals(base)){
-                sumOfBase += expenses.getAmount();}
-        }
-        totalDTO.setTotal(sumOfBase);
-        totalDTO.setCurrency(base);
-        return totalDTO;
     }
 }
